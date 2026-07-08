@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "motion/react";
 import { HistoryIcon } from "../component/Icons";
 import { MILESTONES } from "../data/data";

@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { GlobeIcon, ArrowUpRight } from "./Icons";
 import type { Product } from "../types";

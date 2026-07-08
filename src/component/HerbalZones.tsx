@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { GlobeIcon, Leaf } from "../component/Icons";
 import { HERBAL_ZONES } from "../data/data";

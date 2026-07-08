@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "./Icons";
 import { PRODUCTS_DATA } from "../data/data";

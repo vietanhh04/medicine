@@ -1,4 +1,3 @@
-import React from "react";
 import FadingVideo from "../component/FadingVideo";
 import { ImageIcon, MovieIcon, LightbulbIcon } from "../component/Icons";
 import capabilitiesVideo from "../assets/videos/hf_videocapabilities.mp4";

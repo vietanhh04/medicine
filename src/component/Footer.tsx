@@ -1,4 +1,3 @@
-import React from "react";
 import { Leaf, ArrowUpRight } from "../component/Icons";
 
 export default function Footer() {
