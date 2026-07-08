@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Instrument Serif", serif;
+  --font-body: "Barlow", sans-serif;
+}
+
+html, body {
+  background: #FAFCF8; /* Soft herbal off-white */
+  color: #0B1E12; /* Deep pine charcoal for pristine contrast */
+  font-family: 'Barlow', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Liquid Glass Light (Subtle & Elegant) */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px -2px rgba(11, 30, 18, 0.04), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.2px;
+  background: linear-gradient(180deg, rgba(11, 30, 18, 0.15) 0%, rgba(11, 30, 18, 0.05) 20%, rgba(11, 30, 18, 0) 40%, rgba(11, 30, 18, 0) 60%, rgba(11, 30, 18, 0.05) 80%, rgba(11, 30, 18, 0.15) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Liquid Glass Strong Light (Bolder Glassmorphism) */
+.liquid-glass-strong {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 10px 40px -10px rgba(11, 30, 18, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass-strong::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(180deg, rgba(11, 30, 18, 0.25) 0%, rgba(11, 30, 18, 0.1) 20%, rgba(11, 30, 18, 0) 40%, rgba(11, 30, 18, 0) 60%, rgba(11, 30, 18, 0.1) 80%, rgba(11, 30, 18, 0.25) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Atmospheric Botanical Background Glow */
+.atmospheric-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% -20%, #E8F5E9 0%, #FAFCF8 65%), radial-gradient(circle at 85% 85%, #E1F5FE 0%, transparent 45%);
+  z-index: -1;
+}
+
+.heading-italic {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  letter-spacing: -0.04em;
+}
+
+.tag-pill {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(11, 30, 18, 0.04);
+  border: 1px solid rgba(11, 30, 18, 0.06);
+  color: #3A4F41;
+}
+
