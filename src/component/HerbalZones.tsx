@@ -8,7 +8,7 @@ export default function HerbalZones() {
   const [selectedZone, setSelectedZone] = useState<HerbalZone>(HERBAL_ZONES[0]);
 
   return (
-    <section id="vung-duoc-lieu" className="relative min-h-screen w-full py-28 border-t border-emerald-100 bg-[#F4F9F2] z-20">
+    <section id="growing-region" className="relative min-h-screen w-full py-28 border-t border-emerald-100 bg-[#F4F9F2] z-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-between h-full">
         {/* Section Header */}
         <div className="mb-12">

@@ -4,11 +4,11 @@ import { ArrowUpRight, Menu, X } from "./Icons";
 import { motionVariants } from "../data/data";
 
 const NAV_LINKS = [
-  { href: "#san-pham", label: "Sản phẩm" },
-  { href: "#vung-duoc-lieu", label: "Vùng trồng" },
-  { href: "#capabilities", label: "Thế mạnh" },
-  { href: "#di-san", label: "Di sản" },
-  { href: "#lien-he", label: "Liên hệ" },
+  { href: "#product", label: "Sản phẩm" },
+  { href: "#growing-region", label: "Vùng trồng" },
+  { href: "#strength", label: "Thế mạnh" },
+  { href: "#heritage", label: "Di sản" },
+  { href: "#contact", label: "Liên hệ" },
 ];
 
 export default function Navbar() {
@@ -34,6 +34,11 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 lg:px-16 pointer-events-auto">
       <motion.div
@@ -47,11 +52,11 @@ export default function Navbar() {
         }`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        <span className={`font-heading italic text-3xl font-bold select-none leading-none pb-1 transition-colors duration-300 ${
-          isScrolled ? "text-[#107542]" : "text-white"
-        }`}>
-          n
-        </span>
+        <img
+          src={isScrolled ? "/logonavb-02.svg" : "/logonavc-02.svg"}
+          alt="Logo"
+          className="h-12 w-12 select-none"
+        />
       </motion.div>
 
       {/* Desktop nav */}
@@ -70,6 +75,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => scrollToSection(e, link.href)}
               className={`px-4 py-2 text-xs md:text-sm font-medium font-body transition-colors duration-300 ${
                 isScrolled
                   ? "text-[#0B1E12]/80 hover:text-[#107542]"
@@ -81,7 +87,8 @@ export default function Navbar() {
           ))}
         </div>
         <a
-          href="#lien-he"
+          href="#contact"
+          onClick={(e) => scrollToSection(e, "#contact")}
           className={`ml-2 transition-all duration-300 rounded-full px-4 py-2 text-xs md:text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap shadow-md ${
             isScrolled
               ? "bg-[#107542] text-white hover:bg-[#0B1E12]"
@@ -127,10 +134,13 @@ export default function Navbar() {
             className="md:hidden fixed inset-0 top-0 left-0 z-40 bg-[#050D08]/97 backdrop-blur-lg flex flex-col items-center justify-center gap-2 px-6"
           >
             {NAV_LINKS.map((link, i) => (
-              <motion.a 
+              <motion.a
                 key={link.href}
                 href={link.href}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  scrollToSection(e, link.href);
+                  setIsMenuOpen(false);
+                }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.05 * i }}
@@ -140,8 +150,11 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="#lien-he"
-              onClick={() => setIsMenuOpen(false)}
+              href="#contact"
+              onClick={(e) => {
+                scrollToSection(e, "#contact");
+                setIsMenuOpen(false);
+              }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.05 * NAV_LINKS.length }}

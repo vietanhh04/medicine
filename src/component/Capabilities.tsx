@@ -4,7 +4,7 @@ import capabilitiesVideo from "../assets/videos/hf_videocapabilities.mp4";
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="relative min-h-screen w-full py-28 border-t border-white/5 bg-[#050D08] z-20">
+    <section id="strength" className="relative min-h-screen w-full py-28 border-t border-white/5 bg-[#050D08] z-20">
       {/* Atmosphere Background Video 2 */}
       <FadingVideo
         src={capabilitiesVideo}

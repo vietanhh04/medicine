@@ -4,7 +4,7 @@ import { MILESTONES } from "../data/data";
 
 export default function Heritage() {
   return (
-    <section id="di-san" className="relative min-h-screen w-full py-28 border-t border-emerald-100 bg-[#FAFCF8] z-20">
+    <section id="heritage" className="relative min-h-screen w-full py-28 border-t border-emerald-100 bg-[#FAFCF8] z-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-between h-full">
         {/* Section Header */}
         <div className="mb-16">

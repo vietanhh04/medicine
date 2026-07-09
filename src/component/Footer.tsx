@@ -30,11 +30,15 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div className="md:col-span-3 flex flex-col gap-4 text-xs">
             <h4 className="text-white font-semibold uppercase tracking-wider text-[11px]">Hệ Sinh Thế</h4>
-            <a href="#san-pham" className="hover:text-emerald-400 transition-colors">Sản phẩm chủ lực</a>
-            <a href="#vung-duoc-lieu" className="hover:text-emerald-400 transition-colors">Bản đồ vùng trồng trọt</a>
-            <a href="#capabilities" className="hover:text-emerald-400 transition-colors">Thế mạnh công nghệ</a>
-            <a href="#di-san" className="hover:text-emerald-400 transition-colors">Di sản Nam Dược cổ phương</a>
-            <a href="#lien-he" className="hover:text-emerald-400 transition-colors">Đăng ký đại lý phân phối</a>
+            <a href="product" className="hover:text-emerald-400 transition-colors">Sản phẩm chủ lực</a>
+            <a href="growing region
+              " className="hover:text-emerald-400 transition-colors">Bản đồ vùng trồng trọt</a>
+                          <a href="Strengths
+              " className="hover:text-emerald-400 transition-colors">Thế mạnh công nghệ</a>
+                          <a href="heritage
+              " className="hover:text-emerald-400 transition-colors">Di sản Nam Dược cổ phương</a>
+                          <a href="contact
+              " className="hover:text-emerald-400 transition-colors">Đăng ký đại lý phân phối</a>
           </div>
 
           {/* Column 3: Corporate and Official Sites */}

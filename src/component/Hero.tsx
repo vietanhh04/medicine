@@ -70,7 +70,7 @@ export default function Hero({ onShowShowreel }: HeroProps) {
           className="mt-8 flex flex-col sm:flex-row gap-4 items-center"
         >
           <a
-            href="#san-pham"
+            href="#product"
             className="bg-white hover:bg-[#E8F5E9] transition-all duration-300 px-8 py-3 rounded-full flex items-center gap-3 font-semibold text-[#107542] cursor-pointer shadow-md"
           >
             Khám phá sản phẩm
