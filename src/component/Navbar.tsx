@@ -14,6 +14,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +26,26 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = NAV_LINKS.map((link) =>
+      document.querySelector(link.href)
+    ).filter((el): el is Element => el !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -71,20 +92,27 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center gap-1">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className={`px-4 py-2 text-xs md:text-sm font-medium font-body transition-colors duration-300 ${
-                isScrolled
-                  ? "text-[#0B1E12]/80 hover:text-[#107542]"
-                  : "text-white/80 hover:text-[#4ADE80]"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = activeSection === link.href;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => scrollToSection(e, link.href)}
+                className={`px-4 py-2 text-xs md:text-sm font-medium font-body transition-colors duration-300 ${
+                  isActive
+                    ? isScrolled
+                      ? "text-[#107542]"
+                      : "text-[#4ADE80]"
+                    : isScrolled
+                    ? "text-[#0B1E12]/80 hover:text-[#107542]"
+                    : "text-white/80 hover:text-[#4ADE80]"
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
         <a
           href="#contact"

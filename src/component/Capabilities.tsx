@@ -19,7 +19,7 @@ export default function Capabilities() {
           <span className="text-xs font-bold text-[#4ADE80] tracking-widest uppercase block mb-4">
             THẾ MẠNH CỐT LÕI
           </span>
-          <h2 className="font-heading italic text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] tracking-[-3px] text-white">
+          <h2 className="font-heading italic text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.9] tracking-[-3px] text-white">
             Sứ mệnh gìn giữ,
             <br />
             nâng tầm dược liệu Nam

@@ -15,7 +15,7 @@ export default function HerbalZones() {
           <span className="text-[#107542] text-sm tracking-wider font-semibold block mb-2 uppercase">
             BẢN ĐỒ VÙNG TRỒNG
           </span>
-          <h2 className="font-heading italic text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.9] tracking-[-3px] text-[#0B1E12]">
+          <h2 className="font-heading italic text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.9] tracking-[-3px] text-[#0B1E12]">
             Tự chủ dược liệu chuẩn hóa GACP-WHO
           </h2>
           <p className="text-sm md:text-base text-[#3A4F41] max-w-2xl font-body font-light leading-relaxed mt-4">

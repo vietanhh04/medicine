@@ -2,7 +2,7 @@ import { Leaf, ArrowUpRight } from "../component/Icons";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0B1E12] text-[#A3B3A5] pt-20 pb-12 z-20 overflow-hidden">
+    <footer className="relative bg-[#0B1E12] text-[#6fda7d] pt-20 pb-12 z-20 overflow-hidden">
       {/* Subtle decorative grass contour graphic in footer */}
       <div className="absolute right-0 bottom-0 w-96 h-96 opacity-5 pointer-events-none select-none">
         <Leaf className="w-full h-full text-white" />
@@ -14,8 +14,8 @@ export default function Footer() {
           {/* Column 1: Brand presentation */}
           <div className="md:col-span-5 flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-950 border border-emerald-800 flex items-center justify-center">
-                <span className="font-heading italic text-2xl text-[#107542] font-bold">n</span>
+              <div className="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center">
+                <img src="/logonavc-02.svg" alt="Logo" className="h-12 w-12 select-none" />
               </div>
               <span className="font-heading italic text-2xl text-white tracking-tight">CÔNG TY CỔ PHẦN NAM DƯỢC</span>
             </div>

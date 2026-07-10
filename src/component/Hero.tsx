@@ -1,9 +1,10 @@
 import { motion } from "motion/react";
 import FadingVideo from "./FadingVideo";
 import BlurText from "./BlurText";
-import { ClockIcon, GlobeIcon, Play, Leaf } from "../component/Icons";
+import { ClockIcon, GlobeIcon, Play } from "../component/Icons";
 import { motionVariants } from "../data/data";
 import heroVideo from "../assets/videos/hf_videohero.mp4";
+import leafIcon from "../assets/icons/leaf.svg";
 
 interface HeroProps {
   onShowShowreel: () => void;
@@ -74,7 +75,7 @@ export default function Hero({ onShowShowreel }: HeroProps) {
             className="bg-white hover:bg-[#E8F5E9] transition-all duration-300 px-8 py-3 rounded-full flex items-center gap-3 font-semibold text-[#107542] cursor-pointer shadow-md"
           >
             Khám phá sản phẩm
-            <Leaf className="text-[#107542]" />
+            <img src={leafIcon} alt="Leaf" className="w-5 h-5" />
           </a>
           
           <button
@@ -130,7 +131,7 @@ export default function Hero({ onShowShowreel }: HeroProps) {
         transition={{ duration: 0.8, delay: 1.3, ease: "easeOut" }}
         className="relative z-10 flex flex-col items-center gap-4 pb-12 mt-auto px-4"
       >
-        <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-6 py-1.5 text-xs text-[#A3B3A5] text-center select-none shadow-sm font-medium">
+        <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-6 py-1.5 text-xs text-[#A3B3A5] text-center select-none shadow-sm font-medium mt-4">
           Sản phẩm được hàng triệu người Việt truyền tai nhau sử dụng hằng ngày
         </div>
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-16 mt-2 opacity-90">

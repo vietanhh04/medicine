@@ -25,7 +25,7 @@ export default function ShowreelModal({ isOpen, onClose }: ShowreelModalProps) {
 
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/S2p0P1pYshI?autoplay=1"
+              src="https://www.youtube.com/embed/UkGnmT2On-Y?autoplay=1"
               title="Hành Trình Thương Hiệu Nam Dược chuẩn GACP-WHO"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

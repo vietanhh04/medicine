@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { HistoryIcon } from "../component/Icons";
+import leafIcon from "../assets/icons/leaf.svg";
 import { MILESTONES } from "../data/data";
 
 export default function Heritage() {
@@ -11,7 +11,7 @@ export default function Heritage() {
           <span className="text-[#107542] text-sm tracking-wider font-semibold block mb-2 uppercase">
             HÀNH TRÌNH PHÁT TRIỂN
           </span>
-          <h2 className="font-heading italic text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.9] tracking-[-3px] text-[#0B1E12]">
+          <h2 className="font-heading italic text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.9] tracking-[-3px] text-[#0B1E12]">
             Hơn 2 thập kỷ gìn giữ tinh hoa y học nước nhà
           </h2>
           <p className="text-sm md:text-base text-[#3A4F41] max-w-2xl font-body font-light leading-relaxed mt-4">
@@ -52,7 +52,7 @@ export default function Heritage() {
         {/* Deep philosophy callout */}
         <div className="mt-12 p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-[#E8F5E9]/40 to-teal-50/20 border border-emerald-100 flex flex-col md:flex-row items-center gap-8 shadow-sm">
           <div className="w-20 h-20 rounded-full bg-emerald-100/50 flex items-center justify-center text-[#107542] shrink-0">
-            <HistoryIcon className="w-10 h-10 text-[#107542]" />
+            <img src={leafIcon} alt="Leaf" className="w-10 h-10" />
           </div>
           <div className="text-left">
             <h4 className="font-heading italic text-3xl text-[#0B1E12] leading-tight mb-2">
