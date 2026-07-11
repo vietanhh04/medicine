@@ -12,7 +12,7 @@ interface HeroProps {
 
 export default function Hero({ onShowShowreel }: HeroProps) {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden flex flex-col justify-between bg-[#050D08]">
+    <section id="hero" className="relative min-h-screen w-full overflow-hidden flex flex-col justify-between bg-[#050D08]">
       {/* Background Atmosphere Video - Blended beautifully over botanical dark bg */}
       <FadingVideo
         src={heroVideo}
